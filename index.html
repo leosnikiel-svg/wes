@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Video Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="image.jpg" alt="Kliknij aby obejrzeć wideo" id="thumbnail">
+        <div id="video-container" class="hidden">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Twoja przeglądarka nie wspiera wideo.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        const thumbnail = document.getElementById('thumbnail');
+        const videoContainer = document.getElementById('video-container');
+
+        thumbnail.addEventListener('click', function() {
+            thumbnail.style.display = 'none'; // Ukryj zdjęcie po kliknięciu
+            videoContainer.style.display = 'block'; // Pokaż wideo
+        });
+    </script>
+</body>
+</html>
